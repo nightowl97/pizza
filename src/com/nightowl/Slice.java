@@ -17,7 +17,6 @@ public class Slice {
         this.col1 = col1;
         this.col2 = col2;
         this.size = (row2 - row1 + 1) * (col2 - col1 + 1);
-        this.actualslice = setActualslice();
     }
 
     public List<List<String>> setActualslice() {
@@ -30,6 +29,7 @@ public class Slice {
 
     // Getters
     public List<List<String>> getActualslice() {
+        this.actualslice = setActualslice();
         return actualslice;
     }
 

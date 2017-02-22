@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
         // Read the file
         try{
-            File file = new File(System.getProperty("user.dir") + "/example.in");
+            File file = new File(System.getProperty("user.dir") + "/big.in");
             Scanner s = new Scanner(file);
             list = new ArrayList<>();
             while (s.hasNext()){
@@ -40,12 +40,6 @@ public class Main {
         Slice.entirepizza = data;
         long starttime = System.currentTimeMillis();
         System.out.println("Possible slices: " + possibleSlices(data).size());
-        for (Slice s: possibleSlices(data)){
-            System.out.println("next slice: ");
-            for(List<String> line : s.getActualslice()){
-                System.out.println(line.toString());
-            }
-        }
         System.out.println("Timing: ");
         System.out.println(((System.currentTimeMillis() - starttime) / 1000.0) + " seconds");
         // getConfs(new int[] {3, 4, 2, 5});
@@ -187,5 +181,6 @@ public class Main {
                 }
             }
         }
+        return true;
     }
 }
